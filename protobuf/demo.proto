@@ -1,0 +1,64 @@
+syntax = "proto3";
+package protobuf;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/easierway/partialparse/protobuf_def";
+
+message Person {
+  string name = 1;
+  int32 id = 2;  // Unique ID number for this person.
+  string email = 3;
+
+  enum PhoneType {
+    PHONE_TYPE_UNSPECIFIED = 0;
+    PHONE_TYPE_MOBILE = 1;
+    PHONE_TYPE_HOME = 2;
+    PHONE_TYPE_WORK = 3;
+  }
+
+  message PhoneNumber {
+    string number = 1;
+    PhoneType type = 2;
+  }
+
+  repeated PhoneNumber phones = 4;
+
+  google.protobuf.Timestamp last_updated = 5;
+  string t1 = 6;
+  string t2 = 7;
+  string t3 = 8;
+  string t4 = 9;
+  string t5 = 10;
+  string t6 = 11;
+  string t7 = 12;
+  string t8 = 13;
+  string t9 = 14;
+  string t10 = 15;
+  string t11 = 16;
+  string t12 = 17;
+  string t13 = 18;
+  string t14 = 19;
+  string t15 = 20;
+  string t16 = 21;
+  string t17 = 22;
+  string t18 = 23;
+  string t19 = 24;
+  string t20 = 25;
+  string t21 = 26;
+  string t22 = 27;
+  string t23 = 28;
+  string t24 = 29;
+  string t25 = 30;
+  string t26 = 31;
+  string t27 = 32;
+  string t28 = 33;
+  string t29 = 34;
+  string t30 = 35;
+  string t31 = 36;
+}
+
+message PartialPerson {
+  string name = 1;
+  google.protobuf.Timestamp last_updated = 5;
+}
